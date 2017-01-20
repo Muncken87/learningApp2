@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -47,3 +45,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#This gem is required for your app to query the database and this gem is only needed for the Heroku server, we will add the "pg gem" in the production environment group.
+group :production do
+  gem 'pg'
+end
+
+# Use sqlite3 as the database for Active Record
+group :development, :test do
+  gem 'sqlite3'
+end
