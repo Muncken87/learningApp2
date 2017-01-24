@@ -1,25 +1,46 @@
 
-<div class="container">  
-  <form id="contact" action="" method="post">
-    <h3>Contact Form</h3>
-    <h4>Contact us for custom quote</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-    </fieldset>
-    <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
-</div>
+<div class="container-fluid" id="contact">
+  <div class="header">
+  <h1>Contact Us</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4">
+      <ul>
+        <li>Name: <span class="glyphicon glyphicon-user"></span> Tahir kalim</li>
+        <li>Email: <span class="glyphicon glyphicon-envelope"></span> thrkalim@gmail.com</li>
+        <li>City: <span class="glyphicon glyphicon-home"></span> Frankfurt</li>
+        <li>State: </span> Hessen</li>
+        <li>Gender: </span> Male</li>
+        <li>Profession: <span class="glyphicon glyphicon-education"></span> Web Developer</li>
+      </ul>
+      <!-- google api for maps -->
+      <div id="map"></div>
+
+      
+
+    </div><!--col ends here -->
+
+    <!--form-->
+    <div class="col-lg-8 col-md-8">
+      <form action="/login" method="post" name="login">
+        <div class="form-group">
+          <label for="name">Name(*)</label>
+          <input type="text" class="form-control" id="name" required="required" placeholder="Enter your name here">
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail(*)</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email here" required="required" >
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone(Optional)</label>
+          <input type="text" class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)">
+        </div>
+          <label for="name">Message(*)</label>
+          <textarea style="resize:none" cols="40" rows="5" class="form-control message-box" placeholder="Your message here"  id="message" required="required"></textarea>
+          <p id="char-count"></p> 
+          <p id="visible-comment"></p>
+          <button type="submit" class="btn btn-default" id="button">Submit</button>   
+      </form><!--form ends! -->
+    </div>
+  </div><!--row ends -->
+</div><!-- /container -->
