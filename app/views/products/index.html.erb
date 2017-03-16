@@ -5,7 +5,7 @@
 
 <h1>Listing products</h1>
 
-
+ <%= @test_variable %>
 
 <div class="container-fluid">
   <div class="row">
@@ -15,7 +15,7 @@
         <%= image_tag(product.image_url, class: "img-responsive") %>
         <p><%= product.description %></p>
         <p><%= product.colour %></p>
-        <strong><%= product.price %></strong>
+        
       </div><!-- /col -->
     <% end %>
   </div>
